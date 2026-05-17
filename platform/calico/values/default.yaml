@@ -1,0 +1,27 @@
+# platform/calico/values/default.yaml
+
+installation:
+  enabled: true
+
+  calicoNetwork:
+    ipPools:
+      - name: default-pool
+        cidr: 10.244.0.0/16   # debe coincidir con tu cluster
+        encapsulation: VXLAN
+        natOutgoing: Enabled
+        nodeSelector: all()
+
+policy:
+  type: Calico
+
+typha:
+  enabled: true
+
+# importante en clusters pequeños
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi

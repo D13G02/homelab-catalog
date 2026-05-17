@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calico
+  namespace: argocd
+
+spec:
+  source:
+    repoURL: https://github.com/TU_ORG/gitops.git
+    targetRevision: main
+    path: platform/calico
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd

@@ -1,0 +1,6 @@
+enabled: true
+
+chart_version: 0.14.9
+
+address_pool:
+  - 192.168.1.240-192.168.1.250
