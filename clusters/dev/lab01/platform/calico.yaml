@@ -3,13 +3,18 @@ kind: Application
 metadata:
   name: calico
   namespace: argocd
-
 spec:
+  project: platform
   source:
-    repoURL: https://github.com/TU_ORG/gitops.git
-    targetRevision: main
-    path: platform/calico
-
+    repoURL: https://projectcalico.docs.tigera.io/charts
+    chart: tigera-operator
+    targetRevision: v3.32.0
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
