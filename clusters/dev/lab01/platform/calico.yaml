@@ -6,15 +6,12 @@ metadata:
 spec:
   project: platform
   source:
-    repoURL: https://projectcalico.docs.tigera.io/charts
-    chart: tigera-operator
-    targetRevision: v3.32.0
+    repoURL: https://github.com/D13G02/homelab-gitops.git
+    targetRevision: main
+    path: platform/calico
+    helm:
+      valueFiles:
+        - values/default.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
