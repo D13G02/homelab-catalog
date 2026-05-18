@@ -1,25 +1,7 @@
-controller:
-  kind: Deployment
-
-  replicaCount: 2
-
-  service:
-    type: LoadBalancer
-
   resources:
-    requests:
-      cpu: 100m
-      memory: 128Mi
     limits:
-      cpu: 500m
-      memory: 512Mi
-
-  ingressClassResource:
-    enabled: true
-    default: true
-    name: haproxy
-
-  ingressClass: haproxy
-
-  metrics:
-    enabled: true
+      cpu: 50m
+      memory: 64Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
