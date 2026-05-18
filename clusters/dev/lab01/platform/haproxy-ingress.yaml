@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calico
+  name: ingress-haproxy
   namespace: argocd
 spec:
   project: platform
   source:
     repoURL: https://github.com/D13G02/homelab-gitops.git
     targetRevision: main
-    path: platform/calico
+    path: platform/ingress-haproxy
     helm:
       valueFiles:
         - values/default.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: tigera-operator
+    namespace: ingress-haproxy
   syncPolicy:
     automated:
       prune: true

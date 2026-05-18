@@ -1,8 +1,0 @@
-apiVersion: v2
-name: calico-wrapper
-version: 0.1.0
-
-dependencies:
-  - name: tigera-operator
-    version: v3.32.0
-    repository: https://docs.tigera.io/calico/charts
