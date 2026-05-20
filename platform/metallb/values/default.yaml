@@ -1,15 +1,21 @@
-speaker:
-  enabled: true
-  tolerateMaster: true
+metallb:
+  speaker:
+    enabled: true
+    tolerateMaster: true
 
-controller:
-  enabled: true
+  controller:
+    enabled: true
 
-prometheus:
-  serviceMonitor:
+  prometheus:
+    serviceMonitor:
+      enabled: false
+    podMonitor:
+      enabled: false
+
+  frr:
     enabled: false
-  podMonitor:
-    enabled: false
 
-frr:
-  enabled: false
+  frr-k8s:
+    prometheus:
+      serviceMonitor:
+        enabled: false
