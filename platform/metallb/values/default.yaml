@@ -1,9 +1,5 @@
-configInline:
-  address-pools:
-    - name: default-pool
-      protocol: layer2
-      addresses:
-        - 192.168.50.100-192.168.50.120
+frrk8s:
+  enabled: false
 
 frr-k8s:
   enabled: false
@@ -11,7 +7,16 @@ frr-k8s:
     serviceMonitor:
       enabled: false
 
-global:
-  prometheus:
-    serviceMonitor:
-      enabled: false
+prometheus:
+  scrapeAnnotations: false
+  serviceMonitor:
+    enabled: false
+  podMonitor:
+    enabled: false
+
+configInline:
+  address-pools:
+    - name: default-pool
+      protocol: layer2
+      addresses:
+        - 192.168.50.100-192.168.50.120
