@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress-haproxy
+  name: metallb
   namespace: argocd
 spec:
   project: platform
   source:
     repoURL: https://github.com/D13G02/homelab-gitops.git
     targetRevision: main
-    path: platform/ingress-haproxy
+    path: platform/metallb
     helm:
       valueFiles:
         - values/default.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: haproxy-controller
+    namespace: metallb-system
   syncPolicy:
     automated:
       prune: true
