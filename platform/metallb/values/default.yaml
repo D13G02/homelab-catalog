@@ -1,11 +1,21 @@
-frrk8s:
-  enabled: false
+# Configuración principal - L2 básico
+configInline:
+  address-pools:
+    - name: default-pool
+      protocol: layer2
+      addresses:
+        - 192.168.50.100-192.168.50.120
 
-frr-k8s:
-  enabled: false
-  prometheus:
-    serviceMonitor:
-      enabled: false
+speaker:
+  enabled: true
+  frr:
+    enabled: false
+  frrk8s:
+    enabled: false
+  tolerateMaster: true
+
+controller:
+  enabled: true
 
 prometheus:
   scrapeAnnotations: false
@@ -14,9 +24,11 @@ prometheus:
   podMonitor:
     enabled: false
 
-configInline:
-  address-pools:
-    - name: default-pool
-      protocol: layer2
-      addresses:
-        - 192.168.50.100-192.168.50.120
+frr-k8s:
+  enabled: false
+  prometheus:
+    serviceMonitor:
+      enabled: false
+
+frrk8s:
+  enabled: false
