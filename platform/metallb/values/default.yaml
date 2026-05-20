@@ -1,7 +1,6 @@
 metallb:
   speaker:
     enabled: true
-    tolerateMaster: true
 
   controller:
     enabled: true
@@ -9,11 +8,6 @@ metallb:
   prometheus:
     serviceMonitor:
       enabled: false
-    podMonitor:
-      enabled: false
-
-  frr:
-    enabled: false
 
   frr-k8s:
     prometheus:
