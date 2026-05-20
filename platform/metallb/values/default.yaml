@@ -3,18 +3,4 @@ configInline:
     - name: default-pool
       protocol: layer2
       addresses:
-        - 192.168.1.100-192.168.1.150
-
-controller:
-  enabled: true                    # Habilita el controlador (siempre true)
-  logLevel: info                   # Nivel de log: 'all', 'debug', 'info', 'warn', 'error'
-
-speaker:
-  enabled: true                    # Habilita el speaker (siempre true)
-  logLevel: info
-  tolerateMaster: true             # Permite al speaker ejecutarse en nodos master/control-plane
-  frr:
-    enabled: false                 # FRRouting: 'true' para BGP avanzado, 'false' para modo estándar
-
-crds:
-  enabled: true                    # Crea los CRDs necesarios (IPAddressPool, etc.)
+        - 192.168.50.100-192.168.50.120
