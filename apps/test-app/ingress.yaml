@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-test
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    # Si usas MetalLB con nginx-ingress, estas anotaciones pueden ser útiles
+    # metallb.universe.tf/address-pool: "default-pool"
+spec:
+  rules:
+  - host: nginx-test.local  # Cambia por tu dominio
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-test
+            port:
+              number: 80

@@ -1,4 +1,6 @@
 controller:
+  service:
+    type: LoadBalancer
   resources:
     requests:
       cpu: 50m
