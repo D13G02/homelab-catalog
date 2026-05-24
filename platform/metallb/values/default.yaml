@@ -1,3 +1,19 @@
+frrk8s:
+  enabled: false
+
+crds:
+  enabled: true
+
+speaker:
+  enabled: true
+
+controller:
+  enabled: true
+
+prometheus:
+  serviceMonitor:
+    enabled: false
+
 metallb:
   prometheus:
     serviceMonitor:
