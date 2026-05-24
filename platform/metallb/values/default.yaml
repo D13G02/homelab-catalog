@@ -1,18 +1,14 @@
 metallb:
-  speaker:
-    enabled: true
-
-  controller:
-    enabled: true
-
   prometheus:
     serviceMonitor:
       enabled: false
     podMonitor:
       enabled: false
 
-  frr:
-    enabled: false
-
   frr-k8s:
     enabled: false
+    prometheus:
+      serviceMonitor:
+        enabled: false
+      podMonitor:
+        enabled: false
