@@ -1,7 +1,7 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: lan-pool
+  name: services-pool
   namespace: metallb-system
   annotations:
     argocd.argoproj.io/sync-wave: "1"
