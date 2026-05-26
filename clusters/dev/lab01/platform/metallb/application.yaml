@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - values/default.yaml
-        - $values/clusters/dev/lab01/platform/metallb-values.yaml
+        - $values/clusters/dev/lab01/platform/metallb/values.yaml
   - repoURL: https://github.com/D13G02/homelab-gitops.git
     targetRevision: main
     ref: values
