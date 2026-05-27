@@ -4,12 +4,10 @@ metadata:
   name: nginx-test
   namespace: default
   annotations:
-    kubernetes.io/ingress.class: "nginx"
-    # Si usas MetalLB con nginx-ingress, estas anotaciones pueden ser útiles
-    # metallb.universe.tf/address-pool: "default-pool"
+    kubernetes.io/ingress.class: "haproxy"
 spec:
   rules:
-  - host: nginx-test.local  # Cambia por tu dominio
+  - host: nginx-test.lab01.dev.homelab.corp
     http:
       paths:
       - path: /
