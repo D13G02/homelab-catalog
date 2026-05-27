@@ -3,17 +3,16 @@ kind: Ingress
 metadata:
   name: nginx-test
   namespace: default
-  annotations:
-    kubernetes.io/ingress.class: "haproxy"
 spec:
+  ingressClassName: haproxy
   rules:
-  - host: nginx-test.lab01.dev.homelab.corp
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx-test
-            port:
-              number: 80
+    - host: nginx-test.lab01.dev.homelab.corp
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx-test
+                port:
+                  number: 80
