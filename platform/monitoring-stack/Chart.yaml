@@ -1,9 +1,9 @@
 apiVersion: v2
-name: haproxy
+name: kube-prometheus-stack
 version: 1.0.0
-appVersion: "3.2.12"
+appVersion: "v0.92.1"
 
 dependencies:
-  - name: kubernetes-ingress
-    version: 1.52.1
+  - name: kube-prometheus-stack
+    version: 87.15.1
     repository: https://prometheus-community.github.io/helm-charts
