@@ -1,0 +1,66 @@
+kubeletDir: /var/lib/k0s/kubelet
+
+controller:
+  replicas: 1
+  runOnControlPlane: true
+
+  resources:
+    csiProvisioner:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 100m
+        memory: 64Mi
+    csiResizer:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 100m
+        memory: 64Mi
+    csiSnapshotter:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 50m
+        memory: 48Mi
+    livenessProbe:
+      requests:
+        cpu: 5m
+        memory: 10Mi
+      limits:
+        cpu: 20m
+        memory: 32Mi
+    nfs:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 100m
+        memory: 64Mi
+
+node:
+  resources:
+    livenessProbe:
+      requests:
+        cpu: 5m
+        memory: 10Mi
+      limits:
+        cpu: 20m
+        memory: 32Mi
+    nodeDriverRegistrar:
+      requests:
+        cpu: 5m
+        memory: 10Mi
+      limits:
+        cpu: 20m
+        memory: 32Mi
+    nfs:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+      limits:
+        cpu: 100m
+        memory: 64Mi
