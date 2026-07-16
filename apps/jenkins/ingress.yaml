@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: devops-tools
 spec:
-  ingressClassName: jenkins
+  ingressClassName: haproxy
   rules:
     - host: jenkins.lab01.dev.homelab.corp
       http:
