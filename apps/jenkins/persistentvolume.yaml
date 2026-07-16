@@ -29,7 +29,7 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - worker01
+          - worker01.lab01.dev.homelab.corp
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
