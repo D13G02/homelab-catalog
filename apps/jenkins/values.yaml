@@ -6,3 +6,6 @@ jenkins:
       hostName: "jenkins.lab01.dev.homelab.corp"
       annotations:
         kubernetes.io/ingress.class: "haproxy"
+
+  agent:
+    websocket: true
