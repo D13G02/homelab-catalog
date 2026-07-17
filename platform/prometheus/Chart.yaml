@@ -1,7 +1,7 @@
 apiVersion: v2
 name: prometheus
 version: 1.0.0
-appVersion: "v3.13.1"
+appVersion: v3.13.1
 
 dependencies:
   - name: prometheus

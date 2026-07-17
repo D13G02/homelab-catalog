@@ -1,7 +1,7 @@
 apiVersion: v2
 name: csi-driver-nfs
 version: 1.0.0
-appVersion: "4.13.4"
+appVersion: 4.13.4
 
 dependencies:
   - name: csi-driver-nfs
