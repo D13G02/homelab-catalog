@@ -1,1 +1,8 @@
 jenkins:
+  controller:
+    ingress:
+      enabled: true
+      apiVersion: "extensions/v1beta1"
+      hostName: "jenkins.lab01.dev.homelab.corp"
+      annotations:
+        kubernetes.io/ingress.class: "haproxy"
