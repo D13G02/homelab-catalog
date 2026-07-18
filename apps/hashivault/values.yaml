@@ -1,3 +1,17 @@
 vault:
   global:
     enabled: true
+
+  server:
+    ingress:
+      enabled: true
+      labels: {}
+      annotations: {}
+      ingressClassName: "haproxy"
+      pathType: Prefix
+      activeService: true
+      hosts:
+        - host: vault.lab01.dev.homelab.corp
+          paths: []
+      extraPaths: []
+      tls: []
