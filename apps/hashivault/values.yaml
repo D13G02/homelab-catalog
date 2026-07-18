@@ -15,3 +15,12 @@ vault:
           paths: []
       extraPaths: []
       tls: []
+
+    dataStorage:
+      enabled: true
+      size: 5Gi
+      mountPath: "/vault/data"
+      storageClass: local-storage
+      accessMode: ReadWriteOnce
+      annotations: {}
+      labels: {}
