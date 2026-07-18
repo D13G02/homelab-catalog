@@ -9,3 +9,11 @@ jenkins:
 
   agent:
     websocket: true
+
+  persistence:
+    enabled: true
+    storageClass: local-storage
+    annotations: {}
+    labels: {}
+    accessMode: "ReadWriteOnce"
+    size: "8Gi"
