@@ -4,6 +4,6 @@ version: 1.0.0
 appVersion: 4.13.4
 
 dependencies:
-  - name: grafana
+  - name: csi-driver-nfs
     version: 4.13.4
     repository: https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts
