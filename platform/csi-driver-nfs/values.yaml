@@ -1,16 +1,16 @@
 csi-driver-nfs:
   kubeletDir: /var/lib/k0s/kubelet
 
-  storageClass:
-    create: false
-      name: nfs-csi
-      annotations:
-        storageclass.kubernetes.io/is-default-class: "true"
-      parameters:
-        server: 192.168.50.100
-        share: /srv/nfs/k0s
-        subdir: ${pvc.metadata.namespace}/${pvc.metadata.name}      
-      reclaimPolicy: Delete
-      volumeBindingMode: Immediate
-      mountOptions:
-        - nfsvers=4.1
+#  storageClass:
+#    create: false
+#      name: nfs-csi
+#      annotations:
+#        storageclass.kubernetes.io/is-default-class: "true"
+#      parameters:
+#        server: 192.168.50.100
+#        share: /srv/nfs/k0s
+#        subdir: ${pvc.metadata.namespace}/${pvc.metadata.name}      
+#      reclaimPolicy: Delete
+#      volumeBindingMode: Immediate
+#      mountOptions:
+#        - nfsvers=4.1
