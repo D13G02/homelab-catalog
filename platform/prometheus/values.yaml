@@ -1,4 +1,6 @@
 prometheus:
   server:
+    replicaCount: 2
+    
     persistentVolume:
       enabled: false
