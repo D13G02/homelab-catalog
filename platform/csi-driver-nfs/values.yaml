@@ -1,4 +1,6 @@
 csi-driver-nfs:
+  kubeletDir: /var/lib/k0s/kubelet
+
   storageClass:
     create: false
       name: nfs-csi
