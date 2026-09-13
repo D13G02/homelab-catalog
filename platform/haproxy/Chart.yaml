@@ -1,9 +1,9 @@
 apiVersion: v2
 name: haproxy
 version: 1.0.0
-appVersion: 3.2.12
+appVersion: 3.2.14
 
 dependencies:
   - name: kubernetes-ingress
-    version: 1.52.1
+    version: 1.54.0
     repository: https://haproxytech.github.io/helm-charts
